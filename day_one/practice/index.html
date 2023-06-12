@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <form id="registrationForm">
+      <label for="fName"
+        >First Name:
+        <input type="text" id="fName" required />
+      </label>
+      <br />
+      <label for="lName"
+        >Last Name:
+        <input type="text" id="lName" required />
+      </label>
+      <br />
+      <label for="email"
+        >Email:
+        <input type="email" id="email" required />
+      </label>
+      <br />
+      <label for="password"
+        >Password:
+        <input type="password" id="password" required />
+      </label>
+      <br />
+      <input type="submit" value="Register" />
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
