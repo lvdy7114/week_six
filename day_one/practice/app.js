@@ -2,6 +2,7 @@ const form = document.querySelector("#registrationForm");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 
+
 const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const passwordPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
 
@@ -19,6 +20,7 @@ form.addEventListener("submit", function (event) {
       "Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
     );
   }
+
 
   if (errors.length > 0) {
     alert(errors.join("\n"));
