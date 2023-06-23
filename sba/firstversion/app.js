@@ -232,6 +232,8 @@ function gameRound(ussCaptain,alienShips) {
       ussCaptain.gameOver();
     } else {
       // USS Captain has the option to attack the next alien ship or retreat
+      //battle outcome
+      alert(`Aliens assessing outcome of battle. Alien ship was dealt with ${this.firepower} hits of firepower damage from the USS Assembly ship. Deploys next alien ship.`);
       const userInput = prompt("An alien ship is destroyed. Do you want to attack the next alien ship or retreat? (Type 'attack' or 'retreat')");
       if (userInput === null) {
         ussCaptain.retreat();
