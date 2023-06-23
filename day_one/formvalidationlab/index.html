@@ -18,12 +18,13 @@
         <h1>Register</h1>
         <p>Please provide your information below.</p>
 
-        <!-- Registration Form - client-side form validation check using html included-->
+        <!-- Registration Form -->
         <form id="registration">
           <label for="username">
           <input name="username" type="text" placeholder="Username" minlength="4" id="username" required />
           <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
           </label>
+
           <label for="email">
           <input type="email" type="text" placeholder="Email" id="email" required />
           </label>
@@ -35,16 +36,24 @@
           <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
 
           <label for="confirmPassword">
-          <input name="passwordCheck" type="text" placeholder="Repeat Password" id="confirmPassword" required/>
+          <input name="passwordCheck" 
+                 type="text" 
+                 placeholder="Repeat Password" 
+                 id="confirmPassword" 
+                 oninput = "passwordMatch()"
+                 required/>
           </label>
           <span class="input-icon"><i class="fa-solid fa-key"></i></span><br /><br />
         
 
           <div class="flex-row">
-            <input name="terms" type="checkbox" />
+            <input name="terms" type="checkbox" required />
             <label for="terms"
               >I agree to the&nbsp;<a href="#">Terms of Use</a>.</label>
-            <input type="submit" value="Register" />
+              <br />
+              <br />
+
+            <input type="submit" value="Register" onclick= "this.value =' ' "/>
           </div>
         </form>
       </div>
@@ -56,10 +65,10 @@
 
         <!-- Login Form -->
         <form id="login" style="border-bottom: 1px solid lightgray;">
-          <input name="username" type="text" placeholder="Username" />
+          <input name="username" type="text" placeholder="Username" id="loginusername" required/>
           <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
 
-          <input name="password" type="text" placeholder="Password" />
+          <input name="password" type="text" placeholder="Password" id="loginpassword" required/>
           <span class="input-icon"><i class="fa-solid fa-key"></i></span
           ><br /><br />
 
@@ -75,8 +84,10 @@
       </div>
     </div>
 
-    <!-- Error Display Container -->
+    <!-- Error and success Display Container -->
     <div id="errorDisplay"></div>
+    <div id="errorLogin"></div>
+    <div id="successDisplay"></div>
     <script type="text/javascript" src="../formvalidationlab/index.js"></script>
   </body>
 </html>
